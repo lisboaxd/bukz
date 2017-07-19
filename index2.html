@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load("jquery", "1.3.2", {uncompressed:true});
+	</script>-->
+	<script type="text/javascript" src="func.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Bukz</title>
+</head>
+<body>
+	
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Bukz</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">				
+					<li><a href="" data-toggle="modal" data-target="#myModal2">Cadastro</a></li>
+					<!-- Modal -->
+					<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">Entre com seus dados</h4>
+								</div>
+
+								<div class="modal-body">
+									<form class="form-horizontal" method="post" action="#">									
+										<div class="row" id="row-form-cadastro">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="name" class="cols-sm-2 control-label">Seu nome</label>
+													<div class="cols-sm-10">
+														<div class="input-group" id="input-group-cadastro">
+															<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+															<input type="text" class="form-control" name="name" id="name"  placeholder="Nome"/>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="email" class="cols-sm-2 control-label">Seu e-mail</label>
+													<div class="cols-sm-10">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+															<input type="email" class="form-control" name="email" id="email"  placeholder="email@email.com"/>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="email" class="cols-sm-2 control-label">Seu telefone</label>
+													<div class="cols-sm-10">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+															<input type="text" class="form-control" name="email" id="email"  placeholder="+ 99 (99) 99999-9999"/>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row" id="row-form-cadastro">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="exampleInputTelefone">Estado</label>											
+													<select class="form-control">
+														<option>MG</option>														
+														<option>SP</option>
+														<option>RJ</option>
+														<option>ES</option>
+														<option>RS</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="exampleInputTelefone">Cidade</label>
+													<select class="form-control">
+														<option>Belo Horizonte</option>
+														<option>Jaboticatubas</option>
+														<option>Sabará</option>														
+														<option>Santa Luzia</option>														
+														<option>Viçosa</option>
+													</select>
+												</div>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="email" class="cols-sm-2 control-label">Logradouro</label>
+													<div class="cols-sm-10">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+															<input type="text" class="form-control" name="textLogradouro" id="textLogradouro"  placeholder="Avenida Soraia Pereira"/>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>										
+								</div>	
+
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- Modal -->					
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-3"></div>
+
+			<div class="col-lg-6">
+				<form action="">
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button id="btnFiltro" value="nome" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nome <span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li>Autor</li>
+								<li><a href="#">Usuário</a></li>
+								<li><a href="#">Gênero</a></li>							
+							</ul>
+						</div><!-- /btn-group -->
+						<input type="text" id="inpFiltrar" class="form-control" aria-label="Filtrar" placeholder="Filtrar">
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default" onclick="filtrar()" data-toggle="modal" data-target="#myModal">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								Filtrar
+							</button>
+						</span>
+					</form>
+				</div><!-- /input-group -->
+				<div class="col-md-3"></div>
+			</div>
+
+
+			<div class="row">
+
+
+				<div class="col-xs-12 col-md-4">
+					<h3>Melhores da semana</h3>					
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+
+								
+								<p>
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>
+								</p>
+								<p>
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>	
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p><br>
+							</div>
+
+							<div class="item">
+
+								<h3>Livros mais procurados</h3>
+								<p>
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>
+								</p>
+								<p>
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>	
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">100 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+							</div>
+
+							<div class="item">
+								<h3>Melhores da história</h3>
+								<p>
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">1000 Bukz</span> | <a href="">João Silva</a>
+								</p>
+								<p>
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">999 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>	
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">999 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">999 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+								<p>						
+									<img src="img/perfil.png" alt="">
+									<span title="Bukz são moedas virtuais">999 Bukz</span> | <a href="">João Silva</a>						
+								</p>
+							</div>
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+
+
+					
+
+				</div>
+
+				<div class=" col-xs-12 col-md-4">
+					<h3>TXT3</h3>
+					<img src="img/img01.png" alt="" width="100%" height="100%">
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<h3>TXT3</h3>
+					<img src="img/img01.png" alt="" width="100%" height="100%">
+				</div>
+			</div>
+			
+
+			<div class="row">
+				<h3>Livros Sugeridos</h3>
+
+				<div id="myCarousel3" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel3" data-slide-to="1"></li>
+						<li data-target="#myCarousel3" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="col-md-2">					
+								<a href=""><img src="img/img02.png" alt="" width="100%" height="100%"></a>
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+							<div class="col-md-2">					
+								<img src="img/img02.png" alt="" width="100%" height="100%">
+							</div>
+						</div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel3" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Anterior</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel3" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Próximo</span>
+					</a>
+				</div>
+			</div>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							<div class="row imagens0">
+
+							</div>
+							<br>
+							<div class="row imagens1">
+
+							</div>
+							<br>
+							<div class="row imagens2">
+
+							</div>
+
+							<nav aria-label="...">
+								<ul class="pager">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">...</a></li>
+									<li><a href="#">100</a></li>
+								</ul>
+							</nav>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<br /><br />
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+	</div> 
+
+	<footer class="text-center">
+		<div class="footer-above">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col col-md-4">						
+						<p>Centro Universitário UNA - Campus Barro Preto
+							<br>Turma SII1BN-BPA | Sistemas de Informação</p>
+						</div>
+						<div class="footer-col col-md-4">							
+							<p>BUKZ é um projeto acadêmico, voltado à empréstimos de livros efetuados pelos cidadãos.</p>
+						</div>
+						<div class="footer-col col-md-4">							
+							<p>Feito com ❤ por: 
+								<a href="https://www.linkedin.com/in/bianca-fernanda/" target="_blank">Bianca Fernanda</a>,
+								<a href="http://guilhermealbert.com.br/" target="_blank">Guilherme Albert</a>,
+								<a href="https://br.linkedin.com/in/karen-lamour-3b0037b4" target="_blank">Karen Lamour</a>,
+								<a href="http://mateuslisboa.esy.es/" target="_blank">Mateus Nobre</a>,
+								<a href="https://www.linkedin.com/in/oldom%C3%A1rio-c%C3%A9zar/" target="_blank">Oldomário César</a>,
+								<a href="https://www.linkedin.com/in/vinicius-castrotidvs/" target="_blank">Vinicius Rodrigues</a>,
+								<a href="https://www.linkedin.com/in/vitordiniz09/" target="_blank">Vitor Assis</a>,
+								<a href="https://www.facebook.com/wesley.miranda.18" target="_blank">Wesley Lopes</a>.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-below">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							Copyright &copy; Todos os direitos reservados. BUKZ - 2017.
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<script>
+			$('#myModal').on('shown.bs.modal', function () {
+				$('#myInput').focus()
+			})
+		</script>
+	</body>
+	</html>

@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ================================ HEAD-->
+<head>
+
+    <!-- METATAGS ========================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Bukz</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+
+    <!-- JS ========================================= -->
+    <!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("jquery", "1.3.2", {uncompressed:true});
+    </script>-->
+    <script type="text/javascript" src="func.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+
+    <!-- CSS ========================================= -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
+    <!-- FONTS ========================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">     
+</head> 
+<!-- ================================ HEAD-->
+
+<!-- ================================ BODY-->
+<body> 
+
+
+    <nav> <!-- ================================ NAV-->
+        <div id="flipkart-navbar"> <!-- ================================ NAV-->
+            <div class="container"> <!-- ================================ NAV-->
+                <div class="row row1"> 
+                    <ul class="largenav pull-right">
+                        <li class="upper-links dropdown"><a class="links" href="">Gêneros</a>
+                            <ul class="dropdown-menu">
+                                <li class="profile-li"><a class="profile-links" href="">Dicionários</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Didáticos</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Direito</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Economia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Engenharia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Educação</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Concursos Públicos</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ensino de Línguas</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Esoterismo</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Esportes e Lazer</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Filosofia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Geografia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">História</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Gastronomia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">HQs</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Informática e Tecnologia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Medicina</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Arquitetura</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Psicologia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Religião</a></li>
+                            </ul>
+                        </li>
+                        <li class="upper-links dropdown"><a class="links" href="">Categorias</a>
+                            <ul class="dropdown-menu">
+                                <li class="profile-li"><a class="profile-links" href="">Artes e Fotografia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Viagem</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Infantil</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Teen</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Metodologia de Pesquisa</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Sustentabilidade</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Videogames</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Autoajuda</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Biografias</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Administração</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ciências Biológicas</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ciências Exatas</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ciências Sociais</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Comportamento</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Comunicação</a></li>
+                            </ul>
+                        </li>                   
+                        <li class="upper-links"><a class="links" href="" data-toggle="modal" data-target="#modalEmprestimo">Empréstimo</a></li>                        
+                        <li class="upper-links"><a class="links" href="" data-toggle="modal" data-target="#modalLogin">Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="row row2">
+                    <div class="col-sm-2">                        
+                        <a href="index.html"> <img src="img/bukz.png" alt=""></a>
+                    </div>
+                    
+                    <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
+                        <div class="row">
+                            <form action="">                         
+                                <input class="flipkart-navbar-input col-xs-11" id="inpFiltrar" type="text" placeholder="Nome do livro">
+                                <button type="button" id="btnFiltro" value="nome" class="flipkart-navbar-button col-xs-1" onclick="filtrar()" data-toggle="modal" data-target="#myModal">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                
+                    <div class="cart largenav col-sm-2">
+                        <a class="cart-button" data-toggle="modal" data-target="#modalCadastro">
+                            Ganhe
+                            <span class="item-number">                            
+                                100 pts
+                            </span>
+                        </a>
+                    </div>
+              
+
+            </div>
+            <!-- ================================ ROW ROW2 -->
+        </div>
+        <!-- ================================ CONTAINER -->
+    </div>
+    <!-- ================================ FLIPKART NAVBAR -->
+</nav>
+<!-- ================================ NAV -->
+
+<!-- ========================================== CONTAINER -->
+<div class="container">
+    <!-- ========================================== ROW 1 -->
+    <br />
+
+    <!-- ========================================== ROW 3 -->
+    <div class="row">
+        <div class="col-xs-12 col-md-2">
+            <img class="books-picture" src="img/img10.png" alt="">
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+            Livro: Mitologia Nórdica
+            <br />Dono: <a href="">Bianca Fernanda</a>
+            <br />Gênero: Mitologia | Categoria: Ficção
+            <br />
+            <br />Valor: 89 pontos
+            <br />
+            <br />Estado de conservação inicial: Bom
+            <br /><br />
+            
+            <a href="" data-toggle="modal" data-target="#modalCadastroEmprestimo">
+            <button class="btn btn-default" id="botoes-livros-sugeridos">
+                <span class="glyphicon glyphicon-heart"></span> Quero pegar emprestado!    
+            </button>  
+            </a>
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+            <img class="books-picture_1" src="img/banner-ad3.png" alt="">
+        </div>
+    </div>
+    <!-- ========================================== ROW 3 -->   
+
+    <!-- ========================================== ROW 2 -->
+    <div class="row">
+        <h3>Livros Sugeridos</h3>
+        
+        <a href="pegar-emprestado.html">
+        <div class="col-xs-6 col-sm-6 col-md-2">                  
+            <img class="books-picture" src="img/img01.png" alt="">
+            <br /><br />
+            <button class="btn btn-primary" id="botoes-livros-sugeridos">
+                <span class="glyphicon glyphicon-heart"></span> Gostei    
+            </button>            
+            <br />            
+            <button class="btn btn-danger" id="botoes-livros-sugeridos">        
+                <span class="glyphicon glyphicon-trash"> </span> Remova
+            </button>
+        </div>
+        </a>
+
+        <div class="col-xs-6 col-sm-6 col-md-2">                  
+            <img class="books-picture" src="img/img05.png" alt="">
+            <br /><br />
+            <button class="btn btn-primary" id="botoes-livros-sugeridos">
+                <span class="glyphicon glyphicon-heart"></span> Gostei    
+            </button>            
+            <br />            
+            <button class="btn btn-danger" id="botoes-livros-sugeridos">        
+                <span class="glyphicon glyphicon-trash"> </span> Remova
+            </button>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-2">                  
+            <img class="books-picture" src="img/img05.png" alt="">
+            <br /><br />
+            <button class="btn btn-primary" id="botoes-livros-sugeridos">
+                <span class="glyphicon glyphicon-heart"></span> Gostei    
+            </button>            
+            <br />            
+            <button class="btn btn-danger" id="botoes-livros-sugeridos">        
+                <span class="glyphicon glyphicon-trash"> </span> Remova
+            </button>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-2">                  
+            <img class="books-picture" src="img/img05.png" alt="">
+            <br /><br />
+            <button class="btn btn-primary" id="botoes-livros-sugeridos">
+                <span class="glyphicon glyphicon-heart"></span> Gostei    
+            </button>            
+            <br />            
+            <button class="btn btn-danger" id="botoes-livros-sugeridos">        
+                <span class="glyphicon glyphicon-trash"> </span> Remova
+            </button>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-2">                  
+            <img class="books-picture" src="img/img05.png" alt="">
+            <br /><br />
+            <button class="btn btn-primary" id="botoes-livros-sugeridos">
+                <span class="glyphicon glyphicon-heart"></span> Gostei    
+            </button>            
+            <br />            
+            <button class="btn btn-danger" id="botoes-livros-sugeridos">        
+                <span class="glyphicon glyphicon-trash"> </span> Remova
+            </button>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-2">                  
+            <img class="books-picture" src="img/img05.png" alt="">
+            <br /><br />
+            <button class="btn btn-primary" id="botoes-livros-sugeridos">
+                <span class="glyphicon glyphicon-heart"></span> Gostei    
+            </button>            
+            <br />            
+            <button class="btn btn-danger" id="botoes-livros-sugeridos">        
+                <span class="glyphicon glyphicon-trash"> </span> Remova
+            </button>
+        </div>
+
+    </div> 
+        <!-- ========================================== ROW 2 -->
+    
+    <br /><br />
+    <!-- ========================================== ROW 3 -->
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <img class="books-picture_1" src="img/ad1.png" alt="">
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+            <img class="books-picture_1" src="img/ad2.png" alt="">
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+            <img class="books-picture_1" src="img/ad3.png" alt="">
+        </div>
+    </div>
+    <!-- ========================================== ROW 3 -->
+
+    </div>
+    <!-- ========================================== CONTAINER --> 
+
+
+
+    <!-- Modal LOGIN-->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Entre com seus dados</h4>
+                </div>
+
+                <div class="modal-body"> <!-- modal BODY -->
+                    <form class="form-horizontal" method="post" action="logado.html">
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu e-mail</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="email" class="form-control" name="email" id="email"  placeholder="email@email.com"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Sua senha</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Nome"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                         
+                    </div> <!-- modal BODY --> 
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <input type="submit" class="btn btn-primary" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <!-- Modal  LOGIN -->
+
+    <!-- Modal EMPRÉSTIMO RÁPIDO -->
+    <div class="modal fade" id="modalEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Empréstimo rápido</h4>
+                </div>
+
+                <div class="modal-body"> <!-- modal BODY -->
+                    <form class="form-horizontal" method="post" action="logado.html">
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu e-mail</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="email" class="form-control" name="email" id="email"  placeholder="email@email.com"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Sua senha</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Nome"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            Ou <a href="">cadastre-se</a>, se não tiver uma conta.
+                        </div> <!-- ROW -->                                                       
+                    </div> <!-- modal BODY --> 
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <input type="submit" class="btn btn-primary" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <!-- Modal EMPRÉSTIMO RÁPIDO -->
+
+
+    <!-- Modal CADASTRO-->
+    <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Cadastre-se e ganhe 100$ Coins</h4>
+                </div>
+
+                <div class="modal-body"> <!-- modal BODY -->
+                    <form class="form-horizontal" method="post" action="logado.html">                                 
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Seu nome</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Nome"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu e-mail</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="email" class="form-control" name="email" id="email"  placeholder="email@email.com"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu telefone</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="email" id="email"  placeholder="+ 99 (99) 99999-9999"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputTelefone">Estado</label>                                            
+                                    <select class="form-control">
+                                        <option>MG</option>                                                     
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                        <option>ES</option>
+                                        <option>RS</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputTelefone">Cidade</label>
+                                    <select class="form-control">
+                                        <option>Belo Horizonte</option>
+                                        <option>Jaboticatubas</option>
+                                        <option>Sabará</option>                                                     
+                                        <option>Santa Luzia</option>                                                        
+                                        <option>Viçosa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Logradouro</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="textLogradouro" id="textLogradouro"  placeholder="Avenida Soraia Pereira"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                        
+                    </div> <!-- modal BODY --> 
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <input type="submit" class="btn btn-primary" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <!-- Modal  CADASTRO -->
+
+
+    <!-- Modal CADASTRO EMPRÉSTIMO-->
+    <div class="modal fade" id="modalCadastroEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Cadastre-se, é rapidinho!</h4>
+                </div>
+
+                <div class="modal-body"> <!-- modal BODY -->
+                    <form class="form-horizontal" method="post" action="pontos.html">                                 
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Seu nome</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Nome"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu e-mail</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="email" class="form-control" name="email" id="email"  placeholder="email@email.com"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu telefone</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="email" id="email"  placeholder="+ 99 (99) 99999-9999"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputTelefone">Estado</label>                                            
+                                    <select class="form-control">
+                                        <option>MG</option>                                                     
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                        <option>ES</option>
+                                        <option>RS</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputTelefone">Cidade</label>
+                                    <select class="form-control">
+                                        <option>Belo Horizonte</option>
+                                        <option>Jaboticatubas</option>
+                                        <option>Sabará</option>                                                     
+                                        <option>Santa Luzia</option>                                                        
+                                        <option>Viçosa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Logradouro</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="textLogradouro" id="textLogradouro"  placeholder="Avenida Soraia Pereira"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="row-form-cadastro">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">CPF</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group" id="input-group-cadastro">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-certificate" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="name" id="name"  placeholder="111.111.111-11"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="email" class="cols-sm-2 control-label">ID</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-qrcode" aria-hidden="true"></i></span>
+                                                <input type="email" class="form-control" name="text" id="text"  placeholder="MG-11.111.111"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="email" class="cols-sm-2 control-label">Data Nascimento</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="text" id="email"  placeholder="99/99/99"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" name=""> Li e aceito os <a href="termos-condicoes.pdf" target="_blank">termos e condições</a> da plataforma Bukz.
+                           
+                        </div>  
+
+
+
+                    </div> <!-- modal BODY --> 
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <input type="submit" class="btn btn-primary" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <!-- Modal  CADASTRO EMPRÉSTIMO -->
+
+
+    <!-- Modal BOTÃO FILTRAR -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row imagens0">
+
+                    </div>
+                    <br>
+                    <div class="row imagens1">
+
+                    </div>
+                    <br>
+                    <div class="row imagens2">
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal BOTÃO FILTRAR-->
+
+
+
+    <br /><br /><br />
+    <footer class="text-center">
+        <div class="footer">
+            <div class="container">  
+                <div class="footer-above">
+                    <div class="container">
+                        <br /><br /><br /><br />
+                        <div class="row">
+                            <div class="footer-col col-md-4">                       
+                                <p>Centro Universitário UNA - Campus Barro Preto
+                                    <br>Turma SII1BN-BPA | Sistemas de Informação</p>
+                                </div>
+                                <div class="footer-col col-md-4">                           
+                                    <p>BUKZ é um projeto acadêmico voltado à empréstimos de livros, efetuados pelos cidadãos.</p>
+                                </div>
+                                <div class="footer-col col-md-4">                           
+                                    <p>Feito com ❤ por: 
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/bianca-fernanda/" target="_blank">Bianca Fernanda</a>,
+                                        <a class="a-footer-devs" href="http://guilhermealbert.com.br/" target="_blank">Guilherme Albert</a>,
+                                        <a class="a-footer-devs" href="https://br.linkedin.com/in/karen-lamour-3b0037b4" target="_blank">Karen Lamour</a>,
+                                        <a class="a-footer-devs" href="http://mateuslisboa.esy.es/" target="_blank">Mateus Nobre</a>,
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/oldom%C3%A1rio-c%C3%A9zar/" target="_blank">Oldomário César</a>,
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/vinicius-castrotidvs/" target="_blank">Vinicius Rodrigues</a>,
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/vitordiniz09/" target="_blank">Vitor Assis</a>,
+                                        <a class="a-footer-devs" href="https://www.facebook.com/wesley.miranda.18" target="_blank">Wesley Lopes</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br />
+                            <img src="img/bukz.png"><br /><br />
+                            Copyright &copy; Todos os direitos reservados. BUKZ - 2017.
+                            <br /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').focus()
+            })
+        </script>
+    </body>
+    </html>
+
+

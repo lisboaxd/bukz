@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ================================ HEAD-->
+<head>
+
+    <!-- METATAGS ========================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Bukz</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+
+    <!-- JS ========================================= -->
+    <!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("jquery", "1.3.2", {uncompressed:true});
+    </script>-->
+    <script type="text/javascript" src="func.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+
+    <!-- CSS ========================================= -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
+    <!-- FONTS ========================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">     
+</head> 
+<!-- ================================ HEAD-->
+
+<!-- ================================ BODY-->
+<body>
+
+    <nav> <!-- ================================ NAV-->
+        <div id="flipkart-navbar"> <!-- ================================ NAV-->
+            <div class="container"> <!-- ================================ NAV-->
+                <div class="row row1"> 
+                    <ul class="largenav pull-right">
+                        <li class="upper-links dropdown"><a class="links" href="">Gêneros</a>
+                            <ul class="dropdown-menu">
+                                <li class="profile-li"><a class="profile-links" href="">Dicionários</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Didáticos</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Direito</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Economia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Engenharia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Educação</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Concursos Públicos</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ensino de Línguas</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Esoterismo</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Esportes e Lazer</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Filosofia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Geografia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">História</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Gastronomia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">HQs</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Informática e Tecnologia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Medicina</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Arquitetura</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Psicologia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Religião</a></li>
+                            </ul>
+                        </li>
+                        <li class="upper-links dropdown"><a class="links" href="">Categorias</a>
+                            <ul class="dropdown-menu">
+                                <li class="profile-li"><a class="profile-links" href="">Artes e Fotografia</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Viagem</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Infantil</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Teen</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Metodologia de Pesquisa</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Sustentabilidade</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Videogames</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Autoajuda</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Biografias</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Administração</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ciências Biológicas</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ciências Exatas</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Ciências Sociais</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Comportamento</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Comunicação</a></li>
+                            </ul>
+                        </li>                       
+                        <li class="upper-links"><a class="links" href="" data-toggle="modal" data-target="#modalEmprestimo">Empréstimo</a></li>                        
+                        <li class="upper-links"><a class="links" href="dashboard.html">Dashboard</a></li>                     
+                        
+                        <li class="upper-links dropdown"><a class="links" href=""><span class="glyphicon glyphicon-user"></span> Guilherme Albert</a>
+                            <ul class="dropdown-menu">
+                                <li class="profile-li"><a class="profile-links" href="logado.html">Perfil</a></li>
+                                <li class="profile-li"><a class="profile-links" href="logado.html">Meus livros</a></li>
+                                <li class="profile-li"><a class="profile-links" href="logado.html">Peguei emprestado</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="upper-links dropdown"><a class="links" href=""><span class="glyphicon glyphicon-bell"></span></a>
+                            <ul class="dropdown-menu">
+                                 <li class="profile-li"><a class="profile-links" href="feedback.html">1 livro devolvido</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Karen te avaliou</a></li>
+                                <li class="profile-li"><a class="profile-links" href="">Wesley te avaliou</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="upper-links"><a class="links" href=""><span class="glyphicon glyphicon-cog"></span></a></li>
+                       
+                    </ul>
+                </div>
+
+                <div class="row row2">
+                    <div class="col-sm-2">                        
+                        <img src="img/bukz.png" alt="">
+                    </div>
+                    
+                    <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
+                        <div class="row">
+                            <form action="">                         
+                                <input class="flipkart-navbar-input col-xs-11" id="inpFiltrar" type="text" placeholder="Nome do livro">
+                                <button type="button" id="btnFiltro" value="nome" class="flipkart-navbar-button col-xs-1" onclick="filtrar()" data-toggle="modal" data-target="#myModal">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                
+                    <div class="cart largenav col-sm-2">
+                        <a class="cart-button" data-toggle="modal" data-target="#modalCadastro">
+                            Pontos
+                            <span class="item-number">                            
+                                100
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <!-- ================================ ROW ROW2 -->
+            </div>
+            <!-- ================================ CONTAINER -->
+        </div>
+        <!-- ================================ FLIPKART NAVBAR -->
+    </nav>
+    <!-- ================================ NAV -->
+
+<!-- ========================================== CONTAINER -->
+<div class="container">
+    <!-- ========================================== ROW 1 -->
+    <br />
+
+
+    <!-- ========================================== ROW 2 -->
+    <div class="row">
+
+        <div class="col-xs-12 col-md-2"> </div>
+
+        <div class="col-xs-12 col-md-8"> 
+            
+            <h1>Você ganhou 100 pontos!</h1>
+  
+            <h3>Olá Guilherme, parabéns! Agora que está tudo certo, veja abaixo tudo que você precisa saber sobre os pontos virtuais:</h3>
+            <br>Emprestar livros: Ao disponibilizar um livro na plataforma para enriquecer o catálogo, a bonificação é realizada considerando o estado inicial de conservação do livro. 
+            <br>Se o livro está “Bom”, são creditados 40 pontos. Estado de conservação “Regular”, são creditados 30 pontos. Se a conservação inicial do livro for “Ruim” , serão creditados 20 pontos.
+            <br>
+            <br>Quando um usuário pega seu livro emprestado: Será creditado a quantidade de pontos que vale o livro.
+            <br>
+            <br>Feedback: Também será creditado uma quantidade de pontos de acordo com o feedback dos usuários. A pontuação se dá de acordo com a classificação abaixo:
+            <br>5 estrelas: 15 pontos
+            <br>4 estrelas: 12 pontos
+            <br>3 estrelas: 10 pontos
+            <br>2 estrelas: 7 pontos
+            <br>1 estrela: 5 pontos
+            <br>
+            <br>Dashboard: O usuário também pode ganhar pontos interagindo com a plataforma. Se o seu perfil chegar aos primeiros classificados da semana, será creditado 15 pontos em sua conta.
+            <br>
+            <br>Recomendação: O BUKZ cederá 10 pontos para o usuário que recomendar e engajar novos usuários para a plataforma.
+            <br>
+            <br>
+            <a href="pegar-emprestado2.html">
+                <button class="btn btn-default">Vamos ao que interessa!</button>
+            </a>
+        </div>
+
+        <div class="col-xs-12 col-md-2"></div>
+    </div> 
+    <!-- ========================================== ROW 1 -->
+
+
+    </div>
+    <!-- ========================================== CONTAINER --> 
+
+
+
+    <!-- Modal LOGIN-->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Entre com seus dados</h4>
+                </div>
+
+                <div class="modal-body"> <!-- modal BODY -->
+                    <form class="form-horizontal">
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Nome do livro</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-book" aria-hidden="true"></i></span>
+                                            <input type="email" class="form-control" name="email" id="email"  placeholder="Nome"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Autor do livro</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Autor"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Gênero do livro</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-tags" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Gênero"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- ROW -->
+
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Estado de conservação</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-leaf" aria-hidden="true"></i></span>
+                                            <select class="form-control">
+                                                <option>Bom</option>
+                                                <option>Regular</option>
+                                                <option>Ruim</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Imagem de capa</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i></span>
+                                            <input type="file" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- modal BODY -->
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <input type="submit" class="btn btn-primary" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <!-- Modal  LOGIN -->
+
+    <!-- Modal EMPRÉSTIMO RÁPIDO -->
+    <div class="modal fade" id="modalEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Empréstimo rápido</h4>
+                </div>
+
+                <div class="modal-body"> <!-- modal BODY -->
+                    <form class="form-horizontal" method="post" action="cadastro.php">
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu e-mail</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="email" class="form-control" name="email" id="email"  placeholder="email@email.com"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Sua senha</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Nome"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- ROW -->                                                       
+                    </div> <!-- modal BODY --> 
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <input type="submit" class="btn btn-primary" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <!-- Modal EMPRÉSTIMO RÁPIDO -->
+
+
+    <!-- Modal CADASTRO-->
+    <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Cadastre-se e ganhe 100$ Coins</h4>
+                </div>
+
+                <div class="modal-body"> <!-- modal BODY -->
+                    <form class="form-horizontal" method="post" action="cadastro.php">                                 
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Seu nome</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group" id="input-group-cadastro">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="name" id="name"  placeholder="Nome"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu e-mail</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="email" class="form-control" name="email" id="email"  placeholder="email@email.com"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Seu telefone</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="email" id="email"  placeholder="+ 99 (99) 99999-9999"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="row-form-cadastro">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputTelefone">Estado</label>                                            
+                                    <select class="form-control">
+                                        <option>MG</option>                                                     
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                        <option>ES</option>
+                                        <option>RS</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputTelefone">Cidade</label>
+                                    <select class="form-control">
+                                        <option>Belo Horizonte</option>
+                                        <option>Jaboticatubas</option>
+                                        <option>Sabará</option>                                                     
+                                        <option>Santa Luzia</option>                                                        
+                                        <option>Viçosa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Logradouro</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="textLogradouro" id="textLogradouro"  placeholder="Avenida Soraia Pereira"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                        
+                    </div> <!-- modal BODY --> 
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <input type="submit" class="btn btn-primary" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <!-- Modal  CADASTRO -->
+
+    <!-- Modal BOTÃO FILTRAR -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row imagens0">
+
+                    </div>
+                    <br>
+                    <div class="row imagens1">
+
+                    </div>
+                    <br>
+                    <div class="row imagens2">
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal BOTÃO FILTRAR-->
+
+
+
+    <br /><br /><br />
+    <footer class="text-center">
+        <div class="footer">
+            <div class="container">  
+                <div class="footer-above">
+                    <div class="container">
+                        <br /><br /><br /><br />
+                        <div class="row">
+                            <div class="footer-col col-md-4">                       
+                                <p>Centro Universitário UNA - Campus Barro Preto
+                                    <br>Turma SII1BN-BPA | Sistemas de Informação</p>
+                                </div>
+                                <div class="footer-col col-md-4">                           
+                                    <p>BUKZ é um projeto acadêmico voltado à empréstimos de livros, efetuados pelos cidadãos.</p>
+                                </div>
+                                <div class="footer-col col-md-4">                           
+                                    <p>Feito com ❤ por: 
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/bianca-fernanda/" target="_blank">Bianca Fernanda</a>,
+                                        <a class="a-footer-devs" href="http://guilhermealbert.com.br/" target="_blank">Guilherme Albert</a>,
+                                        <a class="a-footer-devs" href="https://br.linkedin.com/in/karen-lamour-3b0037b4" target="_blank">Karen Lamour</a>,
+                                        <a class="a-footer-devs" href="http://mateuslisboa.esy.es/" target="_blank">Mateus Nobre</a>,
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/oldom%C3%A1rio-c%C3%A9zar/" target="_blank">Oldomário César</a>,
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/vinicius-castrotidvs/" target="_blank">Vinicius Rodrigues</a>,
+                                        <a class="a-footer-devs" href="https://www.linkedin.com/in/vitordiniz09/" target="_blank">Vitor Assis</a>,
+                                        <a class="a-footer-devs" href="https://www.facebook.com/wesley.miranda.18" target="_blank">Wesley Lopes</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <br />
+                            <img src="img/bukz.png"><br /><br />
+                            Copyright &copy; Todos os direitos reservados. BUKZ - 2017.
+                            <br /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').focus()
+            })
+        </script>
+    </body>
+    </html>
+
+
