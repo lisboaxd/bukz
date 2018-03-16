@@ -1,0 +1,11 @@
+.footer{
+    width:100%; 
+    float:left; 
+    background:#993333; 
+    height:100%;
+    color: #fff;
+}
+
+.a-footer-devs{
+	color: 000;
+}
