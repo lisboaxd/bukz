@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="#">
-    <img src="https://github.com/lisboaxd/bukz/blob/master/public/src/img/bukz-red.png" width="200px" alt="Bukz brand">
+    <img src="https://raw.githubusercontent.com/lisboaxd/bukz/master/src/img/bukz-red.png" width="200px" alt="Bukz brand">
   </a>
 
   <h3 align="center">Bukz: Plataforma de empréstimo de livros</h3>
